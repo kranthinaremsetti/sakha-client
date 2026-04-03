@@ -114,6 +114,8 @@
   - Automatically send and play Audio  
   - Supports OpenAI, Azure OpenAI, and Elevenlabs
 
+- 🎙️ **Voice Input & Output**: Add speech-to-text and text-to-speech for hands-free interaction.
+
 - 📥 **Import & Export Conversations**:  
   - Import Conversations from LibreChat, ChatGPT, Chatbot UI  
   - Export conversations as screenshots, markdown, text, json

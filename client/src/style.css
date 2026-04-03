@@ -2919,3 +2919,21 @@ html {
 .sharepoint-picker-bg {
   background-color: #f5f5f5;
 }
+
+@keyframes recording-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.recording-pulse {
+  animation: recording-pulse 2s infinite;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+

@@ -115,12 +115,19 @@ export default function AudioRecorder({
           onClick={isListening === true ? handleStopRecording : handleStartRecording}
           disabled={disabled}
           className={cn(
-            'flex size-9 items-center justify-center rounded-full p-1 transition-colors hover:bg-surface-hover',
+            'relative flex size-9 items-center justify-center rounded-full p-1 transition-colors hover:bg-surface-hover',
+            isListening ? 'recording-pulse bg-red-500/10 hover:bg-red-500/20' : '',
           )}
           title={localize('com_ui_use_micrphone')}
           aria-pressed={isListening}
         >
           {renderIcon()}
+          {isListening && (
+            <span className="absolute right-1 top-1 flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
+            </span>
+          )}
         </button>
       }
     />

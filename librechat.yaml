@@ -128,6 +128,17 @@ actions:
 endpoints:
   
   custom:
+    - name: "Ollama"
+      apiKey: "ollama"
+      baseURL: "http://host.docker.internal:11434/v1"
+      models:
+        default: ["llama3"]
+        fetch: true
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      forcePrompt: false
+
     - name: "vLLM"
       apiKey: "vllm"
       baseURL: "http://100.100.108.100:8081/v1"
